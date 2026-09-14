@@ -6,23 +6,21 @@ Interactive PetCare web platform architecture and interconnections.
 
 ```mermaid
 graph TD
-    %% Стилизация и слои (Layout)
-    subgraph Core ["1. Входные точки"]
+    subgraph Core ["1. Entry Points"]
         Home["🏠 HOME PAGE<br/>(Control Center & SOS)"]
         Species["🐾 SPECIES<br/>(Pet Matchmaker)"]
     end
 
-    subgraph CareHub ["2. Ежедневный уход"]
+    subgraph CareHub ["2. Daily Care"]
         Nutrition["🥗 NUTRITION<br/>(Diet & Calories)"]
         Care["✂️ CARE<br/>(Grooming & Routine)"]
     end
 
-    subgraph Welfare ["3. Здоровье и адаптация"]
+    subgraph Welfare ["3. Health & Adoption"]
         Health["🏥 HEALTH<br/>(Symptom Checker)"]
         Shelters["🏠 SHELTERS<br/>(Adoption & Intro)"]
     end
 
-    %% Основные потоки
     Home --> Species
     Home --> Nutrition
     Home --> Health
@@ -37,14 +35,8 @@ graph TD
     Shelters --> Care
     Shelters --> Health
     Shelters --> Nutrition
+```
 
-    %% Настройка стиля
-    style Home fill:#2d3748,stroke:#4a5568,color:#fff
-    style Species fill:#2d3748,stroke:#4a5568,color:#fff
-    style Nutrition fill:#1a202c,stroke:#4a5568,color:#fff
-    style Care fill:#1a202c,stroke:#4a5568,color:#fff
-    style Health fill:#1a202c,stroke:#4a5568,color:#fff
-    style Shelters fill:#1a202c,stroke:#4a5568,color:#fff
 ---
 
 ### Page Interconnections & User Flow
