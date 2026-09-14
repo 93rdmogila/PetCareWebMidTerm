@@ -5,27 +5,21 @@ Interactive PetCare web platform architecture and interconnections.
 ## 📐 Site Structure & Interconnections
 
 ```mermaid
-graph TD
-    subgraph Core ["1. Entry Points"]
-        Home["🏠 HOME PAGE<br/>(Control Center & SOS)"]
-        Species["🐾 SPECIES<br/>(Pet Matchmaker)"]
-    end
+graph TB
+    Home["🏠 HOME PAGE<br/>(Control Center & SOS)"]
+    Species["🐾 SPECIES<br/>(Pet Matchmaker)"]
+    
+    Nutrition["🥗 NUTRITION<br/>(Diet & Calories)"]
+    Care["✂️ CARE<br/>(Grooming & Routine)"]
+    
+    Health["🏥 HEALTH<br/>(Symptom Checker)"]
+    Shelters["🏠 SHELTERS<br/>(Adoption & Intro)"]
 
-    subgraph CareHub ["2. Daily Care"]
-        Nutrition["🥗 NUTRITION<br/>(Diet & Calories)"]
-        Care["✂️ CARE<br/>(Grooming & Routine)"]
-    end
-
-    subgraph Welfare ["3. Health & Adoption"]
-        Health["🏥 HEALTH<br/>(Symptom Checker)"]
-        Shelters["🏠 SHELTERS<br/>(Adoption & Intro)"]
-    end
-
+    %% Направление связей сверху вниз
     Home --> Species
     Home --> Nutrition
     Home --> Health
 
-    Species --> Nutrition
     Species --> Care
     Species --> Shelters
 
