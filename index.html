@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>PetCare | Home</title>
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+		<link rel="stylesheet" href="styles.css">
+	</head>
+	<body>
+		<header>
+			<nav class="navbar navbar-expand-lg bg-white sticky-top shadow-sm">
+				<div class="container">
+					<a class="navbar-brand" href="index.html">🐾 PetCare</a>
+					<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainMenu" aria-label="Toggle menu">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+					<div class="collapse navbar-collapse" id="mainMenu">
+						<ul class="navbar-nav ms-auto">
+							<li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+							<li class="nav-item"><a class="nav-link" href="species.html">Species</a></li>
+							<li class="nav-item"><a class="nav-link" href="nutrition.html">Nutrition</a></li>
+							<li class="nav-item"><a class="nav-link" href="care.html">Care</a></li>
+							<li class="nav-item"><a class="nav-link" href="health.html">Health</a></li>
+							<li class="nav-item"><a class="nav-link" href="shelters.html">Shelters</a></li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+		</header>
+
+		<main>
+			<section class="hero">
+				<div class="container">
+					<div class="row align-items-center">
+						<div class="col-md-6">
+							<h1>Everything your pet needs, in one place</h1>
+							<p class="lead">PetCare helps owners learn about breeds, food, grooming and health, and find a new friend to adopt.</p>
+							<a href="species.html" class="btn btn-pet">Find your pet</a>
+							<a href="shelters.html" class="btn btn-outline-pet">Adopt</a>
+						</div>
+						<div class="col-md-6 text-center">
+							<img src="https://placedog.net/600/400?id=12" class="img-fluid hero-img" alt="Happy dog playing outside">
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="container py-5 text-center">
+				<h2>What is PetCare?</h2>
+				<p class="mx-auto about-text">PetCare is a small guide for pet owners. Pick a topic below to learn about your pet's species, nutrition, daily care and health. Everything is connected, so you can move easily between pages.</p>
+			</section>
+
+			<section class="container pb-5">
+				<div class="row g-4">
+					<div class="col-lg-6">
+						<article class="card-box">
+							<h2 class="h4">Pet profile</h2>
+							<form action="species.html" method="get">
+								<div class="row g-2">
+									<div class="col-6">
+										<label for="petName" class="form-label">Pet name</label>
+										<input type="text" id="petName" class="form-control" placeholder="Buddy">
+									</div>
+									<div class="col-6">
+										<label for="petSpecies" class="form-label">Species</label>
+										<select id="petSpecies" class="form-select">
+											<option>Dog</option>
+											<option>Cat</option>
+										</select>
+									</div>
+									<div class="col-4">
+										<label for="petAge" class="form-label">Age</label>
+										<input type="number" id="petAge" class="form-control" placeholder="2">
+									</div>
+									<div class="col-4">
+										<label for="petBreed" class="form-label">Breed</label>
+										<input type="text" id="petBreed" class="form-control" placeholder="Corgi">
+									</div>
+									<div class="col-4">
+										<label for="petHair" class="form-label">Hair</label>
+										<select id="petHair" class="form-select">
+											<option>Short</option>
+											<option>Long</option>
+										</select>
+									</div>
+								</div>
+								<button type="submit" class="btn btn-pet mt-3">Save profile</button>
+							</form>
+						</article>
+					</div>
+
+					<div class="col-lg-6">
+						<article class="card-box">
+							<h2 class="h4">A day in the life</h2>
+							<ul class="timeline">
+								<li><a href="nutrition.html"><span class="time">Morning</span> Feeding → Nutrition</a></li>
+								<li><a href="care.html"><span class="time">Midday</span> Grooming → Care</a></li>
+								<li><a href="health.html"><span class="time">Evening</span> Health check → Health</a></li>
+							</ul>
+						</article>
+					</div>
+				</div>
+			</section>
+
+			<section class="container pb-5">
+				<h2 class="text-center mb-4">Explore PetCare</h2>
+				<div class="row g-4">
+					<div class="col-6 col-lg-3">
+						<a href="species.html" class="quick-card">
+							<h3 class="h5">🐕 Species</h3>
+							<p>Compare breeds and find your match.</p>
+						</a>
+					</div>
+					<div class="col-6 col-lg-3">
+						<a href="nutrition.html" class="quick-card">
+							<h3 class="h5">🍗 Nutrition</h3>
+							<p>Calories, food and feeding tips.</p>
+						</a>
+					</div>
+					<div class="col-6 col-lg-3">
+						<a href="care.html" class="quick-card">
+							<h3 class="h5">🛁 Care</h3>
+							<p>Grooming and daily routine.</p>
+						</a>
+					</div>
+					<div class="col-6 col-lg-3">
+						<a href="health.html" class="quick-card">
+							<h3 class="h5">🩺 Health</h3>
+							<p>Common symptoms explained.</p>
+						</a>
+					</div>
+				</div>
+			</section>
+
+			<section class="container pb-5">
+				<div class="sos-box">
+					<h2 class="h4">🚨 SOS – urgent health</h2>
+					<p>Trouble breathing, poisoning, heavy bleeding or collapse? Contact a veterinarian immediately.</p>
+					<a href="health.html" class="btn btn-sos">Go to Health</a>
+				</div>
+			</section>
+
+			<section class="adopt-cta text-center">
+				<div class="container">
+					<h2>Ready to adopt?</h2>
+					<p>Meet pets that are waiting for a loving home.</p>
+					<a href="shelters.html" class="btn btn-pet">Visit shelters</a>
+				</div>
+			</section>
+		</main>
+
+		<footer class="text-center py-4">
+			<div class="container">
+				<p class="mb-1">🐾 PetCare – Midterm Project</p>
+				<p class="small mb-0">For education only. Not a replacement for a veterinarian.</p>
+			</div>
+		</footer>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+	</body>
+</html>

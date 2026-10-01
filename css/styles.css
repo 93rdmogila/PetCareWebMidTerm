@@ -1,0 +1,125 @@
+body{
+	font-family: "Poppins", "Segoe UI", sans-serif;
+	background-color: #faf6f0;
+	color: #2d3436;
+}
+h1, h2, h3{
+	font-weight: 600;
+}
+a{
+	color: #4a9d8f;
+}
+footer{
+	background-color: #f1e8da;
+	margin-top: 3rem;
+}
+
+.btn-pet{
+	background-color: #4a9d8f;
+	color: white;
+	border-radius: 50px;
+	padding: 0.5rem 1.5rem;
+}
+.btn-pet:hover{
+	background-color: #3b8074;
+	color: white;
+}
+.btn-outline-pet{
+	border: 2px solid #4a9d8f;
+	color: #4a9d8f;
+	border-radius: 50px;
+	padding: 0.5rem 1.5rem;
+}
+.btn-outline-pet:hover{
+	background-color: #4a9d8f;
+	color: white;
+}
+.card-box{
+	background-color: white;
+	border-radius: 16px;
+	padding: 1.5rem;
+	height: 100%;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
+}
+
+.hero{
+	background-color: #f1e8da;
+	padding: 4rem 0;
+}
+.hero h1{
+	font-size: 2.5rem;
+	margin-bottom: 1rem;
+}
+.hero-img{
+	border-radius: 24px;
+	box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+}
+.about-text{
+	max-width: 650px;
+}
+
+.timeline{
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	display: flex;
+	flex-direction: column;
+	gap: 0.8rem;
+}
+.timeline a{
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	background-color: #f1e8da;
+	border-radius: 12px;
+	padding: 0.8rem 1rem;
+	text-decoration: none;
+	color: #2d3436;
+}
+.timeline a:hover{
+	background-color: #e6dac6;
+}
+.time{
+	font-weight: 600;
+	min-width: 80px;
+}
+
+.quick-card{
+	display: block;
+	background-color: white;
+	border-radius: 16px;
+	padding: 1.5rem;
+	text-align: center;
+	text-decoration: none;
+	color: #2d3436;
+	height: 100%;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
+}
+.quick-card:hover{
+	transform: translateY(-4px);
+}
+.quick-card p{
+	margin-bottom: 0;
+	font-size: 0.9rem;
+}
+
+.sos-box{
+	background-color: #fff1ee;
+	border-left: 6px solid #f2775a;
+	border-radius: 16px;
+	padding: 1.5rem;
+}
+.btn-sos{
+	background-color: #f2775a;
+	color: white;
+	border-radius: 50px;
+}
+.btn-sos:hover{
+	background-color: #d9603f;
+	color: white;
+}
+
+.adopt-cta{
+	background-color: #f1e8da;
+	padding: 3rem 0;
+}
