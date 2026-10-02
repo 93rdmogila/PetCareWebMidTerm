@@ -213,3 +213,74 @@ footer{
 	padding: 0.2rem 0.9rem;
 	font-weight: 600;
 }
+/* Care page */
+.care-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.care-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    flex: 1 1 300px;
+    background-color: white;
+    border-radius: 16px;
+    padding: 1.2rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
+}
+
+.care-card p {
+    margin-bottom: 0;
+    font-size: 0.9rem;
+}
+
+.care-icon {
+    font-size: 2rem;
+    background-color: #f1e8da;
+    border-radius: 50%;
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.checklist {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.checklist li {
+    display: flex;
+    align-items: center;
+    gap: 0.6rem;
+    padding: 0.5rem 0;
+    border-bottom: 1px solid #f1e8da;
+}
+
+.routine {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.routine li {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.6rem 0;
+}
+
+.routine-label {
+    background-color: #4a9d8f;
+    color: white;
+    border-radius: 50px;
+    padding: 0.2rem 0.9rem;
+    font-size: 0.85rem;
+    min-width: 80px;
+    text-align: center;
+}
