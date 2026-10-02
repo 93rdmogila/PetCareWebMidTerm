@@ -329,3 +329,51 @@ footer{
 	background-color: #d9603f;
 	color: white;
 }
+
+/* Shelters page */
+.shelter-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+}
+
+.shelter-card {
+    position: relative;
+    background-color: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.07);
+}
+
+.shelter-card:hover {
+    transform: translateY(-4px);
+}
+
+.shelter-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.shelter-body {
+    padding: 1.2rem;
+}
+
+.shelter-status {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background-color: #f2775a;
+    color: white;
+    border-radius: 50px;
+    padding: 0.1rem 0.8rem;
+    font-size: 0.8rem;
+}
+
+#readiness {
+    scroll-margin-top: 80px;
+}
+
+.process li {
+    padding: 0.4rem 0;
+}
