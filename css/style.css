@@ -58,7 +58,7 @@ a{
 	transform: translateY(-4px);
 }
 
-/* CSS Grid: card layouts*/
+/*card layouts*/
 .cards-grid{
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
