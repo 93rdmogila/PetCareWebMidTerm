@@ -1,0 +1,101 @@
+.profile-strip{
+	background: #fff;
+	border-left: 6px solid var(--green);
+	border-radius: 0.8rem;
+	padding: 0.6rem 1rem;
+	display: flex;
+	flex-wrap: wrap;
+	gap: 0.8rem;
+	align-items: center;
+	justify-content: space-between;
+}
+.breed-photo,
+.pet-card img{
+	width: 100%;
+	aspect-ratio: 4 / 3;
+	object-fit: cover;
+}
+.breed-photo.loading{
+	opacity: 0.5;
+}
+.fav-btn{
+	background: none;
+	border: 0;
+	font-size: 1.6rem;
+	line-height: 1;
+	color: var(--coral);
+	cursor: pointer;
+}
+.fav-btn:focus-visible{
+	outline: 3px solid var(--green);
+	border-radius: 0.5rem;
+}
+.pet-card.is-fav{
+	outline: 2px solid var(--coral);
+}
+.symptom-details{
+	display: none;
+}
+.timeline a.active{
+	outline: 2px solid var(--green);
+}
+.checklist li.done label{
+	text-decoration: line-through;
+	opacity: 0.7;
+}
+#toast-container{
+	position: fixed;
+	top: 80px;
+	right: 20px;
+	z-index: 2000;
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+	max-width: 320px;
+}
+.toast-msg{
+	padding: 0.7rem 1rem;
+	border-radius: 0.8rem;
+	color: #fff;
+	background: var(--green);
+	box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+.toast-msg.danger{
+	background: var(--coral);
+}
+
+[data-bs-theme="dark"]{
+	--bg: #16191c;
+	--cream: #232a30;
+	--text: #e8e6e3;
+	--green: #5fc2b2;
+}
+[data-bs-theme="dark"] .navbar.bg-white{
+	background-color: #1f252a !important;
+}
+[data-bs-theme="dark"] .card-pet,
+[data-bs-theme="dark"] .profile-strip{
+	background: #232a30;
+}
+[data-bs-theme="dark"] .badge-pet{
+	background: #2f383f;
+	color: var(--text);
+}
+[data-bs-theme="dark"] .sos-box{
+	background: #3a2723;
+}
+[data-bs-theme="dark"] .link-card,
+[data-bs-theme="dark"] .timeline a{
+	color: var(--text);
+}
+[data-bs-theme="dark"] .btn-pet{
+	background: var(--green);
+	color: #10201d;
+}
+[data-bs-theme="dark"] .btn-pet:hover{
+	background: #79d1c3;
+	color: #10201d;
+}
+[data-bs-theme="dark"] .toast-msg:not(.danger){
+	color: #10201d;
+}
