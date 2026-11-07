@@ -1,73 +1,53 @@
-# PetCareWebMidTerm
+# 🐾 PetCare
 
-Interactive PetCare web platform architecture and interconnections.
+Multi-page educational web app about pet care: breeds, nutrition, grooming, health and adoption.
+Midterm → Endterm → Final project.
 
-## 📐 Site Structure & Interconnections
+## Group members
+- Name Surname — responsibility
+- Name Surname — responsibility
 
-```mermaid
-graph TB
-    Home["🏠 HOME PAGE<br/>(Control Center & SOS)"]
-    Species["🐾 SPECIES<br/>(Pet Matchmaker)"]
-    
-    Nutrition["🥗 NUTRITION<br/>(Diet & Calories)"]
-    Care["✂️ CARE<br/>(Grooming & Routine)"]
-    
-    Health["🏥 HEALTH<br/>(Symptom Checker)"]
-    Shelters["🏠 SHELTERS<br/>(Adoption & Intro)"]
+## Links
+- Live site: <paste GitHub Pages / Netlify link>
+- Repository: <paste repository link>
 
-    %% Направление связей сверху вниз
-    Home --> Species
-    Home --> Nutrition
-    Home --> Health
+## Run / test
+1. Clone the repository and open `index.html` (or run `npx serve`). Internet is required for CDN libraries and APIs.
+2. Home: save a pet profile (try invalid values to see validation), reload the page to check restoring.
+3. Species: search and filter breeds, press "New photo". Nutrition: calculator is prefilled from the profile.
+4. Shelters: search, filter, sort, add favorites, reload; fill in the adoption application.
+5. Toggle dark theme in the navbar and reload.
 
-    Species --> Care
-    Species --> Shelters
-
-    Nutrition <--> Health
-    Care <--> Health
-
-    Shelters --> Care
-    Shelters --> Health
-    Shelters --> Nutrition
+## Project structure
+```
+css/style.css, css/app.css
+js/data.js        arrays: breeds, symptoms, shelterData
+js/models.js      classes: Pet, ShelterPet, StorageService
+js/api.js         fetch + async/await, Dog CEO and Cat Facts
+js/ui.js          DOM helpers, theme toggle, profile strip, toasts
+js/forms.js       validation rules and helpers
+js/jq.js          jQuery effects and traversal
+js/pages/*.js     logic of each page
+js/main.js        common initialization
 ```
 
----
+## API information
+- Dog CEO API `https://dog.ceo/api/breed/{breed}/images/random` — breed photos (Species page).
+- Cat Facts `https://catfact.ninja/fact` — cat fact of the day (Home page).
+- No API keys. States: loading, success, empty, error.
 
-### Page Interconnections & User Flow
+## Final-stage features
+1. API integration (Dog CEO, Cat Facts)
+2. OOP: `Pet`, `ShelterPet extends Pet`, `StorageService`
+3. localStorage: pet profile, favorites, theme, care checklist, applications, cached fact
+4. Search, filter and sort on Shelters (also search/filter on Species and Health)
+5. Dark theme with saved preference
+6. Calorie calculator based on `Pet.dailyCalories()`
+7. Adoption form with validation and dependent field
 
-#### 1. SPECIES → NUTRITION / CARE / SHELTERS
-* **From a specific breed card (e.g., Corgi):**
-  * **→ Nutrition:** Redirects directly to the specific diet requirements for Corgis (e.g., portion sizes, propensity to gain weight).
-  * **→ Care:** Navigates straight to the grooming checklist for thick undercoats and short-leg hygiene.
-  * **→ Shelters:** Displays a widget: *"Looking for a Corgi or a mixed breed? Here are similar pets currently available in local shelters."*
-
-#### 2. NUTRITION ↔ HEALTH
-* **Nutrition → Health:** If the food calculator detects a health issue (e.g., allergies or weight gain), it prompts a direct jump to the *"Digestive Health & Allergies"* section in **Health**.
-* **Health → Nutrition:** Selecting a symptom like "dull coat" in the symptom-checker redirects the user to the *"Vitamins & Fatty Acids"* section in **Nutrition**.
-
-#### 3. CARE ↔ HEALTH
-* While browsing grooming routines (ear cleaning, nail trimming, brushing), contextual tooltips appear (e.g., *"How to spot an ear infection during cleaning?"*), leading directly to the **Health** section.
-
-#### 4. SHELTERS → ALL PAGES
-* Clicking **"Adopt Me"** triggers a step-by-step readiness checklist:
-  * **Species:** Evaluates if the animal's temperament matches the lifestyle.
-  * **Care:** Displays a starter pack checklist (beds, scratchers, shampoo).
-  * **Nutrition:** Outlines the initial transition diet for shelter pets.
-  * **Health:** Provides a first-vaccination and checkup guide for adopted pets.
-
-#### 5. HOME PAGE (Central Hub)
-* **Interactive "Day in the Life" Timeline:** Routes users based on daily routines:
-  * *Morning Feeding* → Navigates to **Nutrition**.
-  * *Midday Grooming* → Navigates to **Care**.
-  * *Evening Health Check* → Navigates to **Health**.
-* **SOS Quick Action:** Instantly links urgent symptoms to both **Health** and nearby **Shelters / Vet Clinics**.
-
----
-
-### Global Connection: Persistent Pet Profile
-
-When a user selects or creates a pet profile anywhere on the site (e.g., *"Cat, 2 years old, long hair"*), all 6 pages dynamically update their context:
-* **Species** highlights traits specific to that breed.
-* **Nutrition** calculates calorie intake for a 2-year-old cat.
-* **Care** filters articles to focus on long-hair coat maintenance.
-* **Health** adjusts vaccination and preventive care schedules for a 2-year-old.
+## Endterm features
+- Arrays and loops (`forEach`, `for...of`, `filter`, `map`), reusable functions with parameters and return values
+- Dynamic DOM rendering from arrays, adding and removing elements
+- `addEventListener` with `click`, `input`, `change`, `submit`, `DOMContentLoaded`; `preventDefault()`
+- Form validation: pet profile, calculator, adoption application
+- jQuery: ID/class/attribute/descendant selectors, `closest`, `find`, `parent`, `siblings`, events, `slideToggle`, `slideDown`, `fadeIn`, `fadeOut`, `fadeTo`
