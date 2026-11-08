@@ -4,12 +4,9 @@ Multi-page educational web app about pet care: breeds, nutrition, grooming, heal
 Midterm → Endterm → Final project.
 
 ## Group members
-- Name Surname — responsibility
-- Name Surname — responsibility
-
-## Links
-- Live site: <paste GitHub Pages / Netlify link>
-- Repository: <paste repository link>
+- Yerzhanov Amanzhol
+- Sanzhar Zhakanov
+- Repository: https://github.com/93rdmogila/PetCareWebMidTerm
 
 ## Run / test
 1. Clone the repository and open `index.html` (or run `npx serve`). Internet is required for CDN libraries and APIs.
